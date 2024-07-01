@@ -1,0 +1,19 @@
+[package]
+name = "temporary_dmotor_ros"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+safe_drive = "0.2"
+drobo_interfaces = { path = "/tmp/daniel_ws/drobo_interfaces" }
+motor_controller = { git = "https://github.com/nityc-d-robo/motor_controller", branch = "lib-dev" }
+
+
+[package.metadata.ros]
+msg = ["drobo_interfaces"]
+
+#please change omni_control_sample to your work space name 
+msg_dir = "/tmp/daniel_ws/"
+safe_drive_version = "0.2"
